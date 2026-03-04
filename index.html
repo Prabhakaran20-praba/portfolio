@@ -2,159 +2,436 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prabhakaran | Portfolio</title>
+    <title>Prabhakaran | Python Full Stack Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
         }
 
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+        body{
+            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+            color:white;
         }
 
-        header {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
+        header{
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
         }
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
+        header h1{
+            color:#00f5d4;
         }
 
-        h2 {
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#00f5d4;
+        }
+
+        .hero{
+            padding:80px 10%;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+
+        .hero-text{
+            flex:1;
+        }
+
+        .hero h2{
+            font-size:40px;
+        }
+
+        .hero span{
+            color:#00f5d4;
+        }
+
+        .hero p{
+            margin-top:20px;
+            max-width:500px;
+            color:#ddd;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 25px;
+            background:#00f5d4;
+            color:black;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:scale(1.05);
+        }
+
+        .hero img{
+            width:280px;
+            border-radius:50%;
+            border:5px solid #00f5d4;
+        }
+
+        section{
+            padding:60px 10%;
+        }
+
+        h3{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:30px;
+            color:#00f5d4;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.1);
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            background:rgba(255,255,255,0.2);
+        }
+
+        .card i{
+            font-size:40px;
+            margin-bottom:15px;
+            color:#00f5d4;
+        }
+
+        .contact p{
+            text-align:center;
+            margin-bottom:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#111;
+            margin-top:40px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
             margin-bottom: 15px;
-            color: #222;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+            transition: 0.3s;
         }
 
-        .skills span {
-            display: inline-block;
-            background: #222;
-            color: white;
-            padding: 6px 12px;
-            margin: 5px;
-            border-radius: 4px;
-            font-size: 14px;
+        .card:hover img {
+            transform: scale(1.05);
         }
 
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-            margin-top: 30px;
-        }
+        .project-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
-        a {
-            color: #0077b5;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .cv-btn {
-    display: inline-block;
-    background: #222;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 5px;
+.btn {
+    padding: 8px 14px;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    color: white;
 }
 
-.cv-btn:hover {
-    background: #444;
+.github-btn {
+    background-color: #24292e;
 }
 
+.github-btn:hover {
+    background-color: black;
+}
+
+.live-btn {
+    background-color: #28a745;
+}
+
+.live-btn:hover {
+    background-color: #1e7e34;
+}
+
+.contact a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    text-align: center;
+    color: white;
+}
+
+/* Heading */
+.contact h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Contact Box */
+.contact p {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 15px auto;
+    width: 330px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+/* Icons */
+.contact i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Links */
+.contact a {
+    text-decoration: none;
+    color: #00c6ff;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+.contact p:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Link Hover */
+.contact a:hover {
+    color: #ffffff;
+}
+
+
+        @media(max-width:768px){
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero img{
+                margin-top:30px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>S. Prabhakaran</h1>
-    <p>Full Stack Python Developer</p>
+    <h1>Prabhakaran</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section>
-    <h2>About Me</h2>
+<section class="hero" id="about">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Prabhakaran</span></h2>
+        <h4>Python Full Stack Developer</h4>
+        <p>
+            Motivated Full Stack Python Developer with knowledge in Python, Django, HTML, CSS, Bootstrap, JavaScript, and MySQL.
+            Passionate about building responsive and user-friendly web applications.
+        </p>
+
+        <a href="S. Prabhakaran .pdf" download class="btn">
+            Download Resume / CV
+        </a>
+    </div>
+
+    <!-- Profile Image -->
+    <img src="photo.jpg" alt="Profile Photo">
+</section>
+
+<section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="grid">
+        <div class="card">
+            <i class="fab fa-python"></i>
+            <h4>Python</h4>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-server"></i>
+            <h4>Django</h4>
+        </div>
+
+        <div class="card">
+            <i class="fab fa-html5"></i>
+            <h4>HTML</h4>
+        </div>
+
+        <div class="card">
+            <i class="fab fa-css3-alt"></i>
+            <h4>CSS</h4>
+        </div>
+
+        <div class="card">
+            <i class="fab fa-js"></i>
+            <h4>JavaScript</h4>
+        </div>
+
+         <div class="card">
+            <i class="fab fa-bootstrap"></i>
+            <h4>Bootstrap</h4>
+        </div>
+
+        <div class="card">
+            <i class="fab fa-github"></i>
+            <h4>GitHub</h4>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-database"></i>
+            <h4>MySQL</h4>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="grid">
+
+        <!-- Frontend Project -->
+        <div class="card">
+            <img src="frontend image.png" alt="Ecommerce Frontend Project">
+            <h4>E-Commerce Website</h4>
+            <p>
+                Responsive e-commerce website using HTML, CSS, Bootstrap, and JavaScript with cart functionality.
+            </p>
+
+            <div class="project-buttons">
+                <!-- Live Demo -->
+                <a href="https://prabhakaran20-praba.github.io/frontend-project/"
+                   target="_blank"
+                   class="btn live-btn">
+                   🚀 View Project
+                </a>
+
+                <!-- GitHub Code -->
+                <a href="https://github.com/Prabhakaran20-praba/frontend-project"
+                   target="_blank"
+                   class="btn github-btn">
+                   🐙 View Code
+                </a>
+
+
+            </div>
+        </div>
+
+        <!-- Backend Project -->
+        <div class="card">
+            <img src="backend image.png" alt="Ecommerce Backend Project">
+            <h4>E-Commerce Web Application</h4>
+            <p>
+                Backend built using Python, Django, and MySQL with authentication and product management.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://prabhakaran20-praba.github.io/frontend-project/"
+                   target="_blank"
+                   class="btn live-btn">
+                   🚀 View Project
+                </a>
+
+
+                <!-- GitHub Code -->
+                <a href="https://github.com/Prabhakaran20-praba/your-backend-repo"
+                   target="_blank"
+                   class="btn github-btn">
+                   🐙 View Code
+                </a>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h3>Contact Me</h3>
+
+    <!-- Email -->
     <p>
-        Motivated Full Stack Python Developer with knowledge in Python, Django,
-        HTML, CSS, Bootstrap, JavaScript, and MySQL. Passionate about building
-        responsive and user-friendly web applications.
+        <i class="fas fa-envelope"></i>
+       <a href="https://mail.google.com/mail/?view=cm&to=prabhakaran2002sakthi@gmail.com"
+       target="_blank">
+        prabhakaran2002sakthi@gmail.com
+    </a>
     </p>
-</section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Python</span>
-        <span>Django</span>
-        <span>JavaScript</span>
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>Bootstrap</span>
-        <span>MySQL</span>
-        <span>Git</span>
-    </div>
-</section>
+    <!-- Phone -->
+    <p>
+        <i class="fas fa-phone"></i>
+        <a href="tel:9345704911">
+            9345704911
+        </a>
+    </p>
 
-<section>
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>E-Commerce Website</h3>
-        <p>
-            Developed a responsive e-commerce website using HTML, CSS,
-            Bootstrap, and JavaScript with cart functionality.
-        </p>
-    </div>
-
-    <div class="project">
-        <h3>E-Commerce Web Application</h3>
-        <p>
-            Built backend using Python, Django, and MySQL with authentication,
-            product management, and database integration.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: prabhakaran2002sakthi@gmail.com</p>
-    <p>Phone: 9345704911</p>
-    <p>LinkedIn: 
-        <a href="https://www.linkedin.com/in/prabhakaran2002" target="_blank">
+    <!-- LinkedIn -->
+    <p>
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/prabhakaran2002" target="_blank">
             linkedin.com/in/prabhakaran2002
         </a>
     </p>
-    <br>
-    <a href="/S. Prabhakaran .pdf" download class="cv-btn">Download CV</a>
 </section>
 
 <footer>
-    <p>© 2026 S. Prabhakaran | Portfolio</p>
+    <p>© 2026 Prabhakaran | Python Full Stack Developer</p>
 </footer>
 
 </body>
